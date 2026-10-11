@@ -1,0 +1,19 @@
+# Board backups exported from the app can contain personal tasks
+priority-matrix-*.json
+
+# Local working copies and rollback snapshots from design tools
+*-before-*.html
+*-test.html
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+%SystemDrive%/
+
+# Editor folders
+.vscode/
+.idea/
+
+# Test tooling
+node_modules

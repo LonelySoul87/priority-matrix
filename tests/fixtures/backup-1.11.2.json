@@ -1,0 +1,212 @@
+{
+  "appVersion": "v1.11.2",
+  "version": 7,
+  "extras": {
+    "version": 1,
+    "revision": 4,
+    "templates": [
+      {
+        "id": "fx-t",
+        "name": "Weekly review",
+        "text": "Weekly review",
+        "steps": [
+          {
+            "id": "fx-ts",
+            "text": "Clear Inbox",
+            "done": false
+          }
+        ],
+        "description": "",
+        "labels": [
+          "habits"
+        ],
+        "recurrence": {
+          "unit": "days",
+          "every": 7
+        }
+      }
+    ],
+    "expandedSteps": [
+      "fx-a"
+    ],
+    "expandedDetails": [],
+    "draft": null,
+    "savedFilters": [
+      {
+        "id": "fx-sf",
+        "name": "finance",
+        "tag": "finance",
+        "query": ""
+      }
+    ],
+    "activeTag": "",
+    "scheduled": [
+      {
+        "note": {
+          "id": "fx-h",
+          "text": "Pay rent",
+          "steps": [],
+          "description": "",
+          "labels": [],
+          "recurrence": {
+            "unit": "months",
+            "every": 1
+          },
+          "seriesId": "fx-f",
+          "repeatIssued": false
+        },
+        "sourceId": "fx-f",
+        "completedAt": 1760000000000,
+        "destination": "urgent-important",
+        "availableAt": 2208988800000
+      }
+    ],
+    "bulkText": "",
+    "bulkReview": null
+  },
+  "quadrants": {
+    "urgent-important": [
+      {
+        "id": "fx-a",
+        "text": "File the tax return",
+        "steps": [
+          {
+            "id": "fx-s1",
+            "text": "Collect receipts",
+            "done": true
+          },
+          {
+            "id": "fx-s2",
+            "text": "Submit",
+            "done": false
+          }
+        ],
+        "description": "Portal: https://example.com/tax.",
+        "labels": [
+          "finance"
+        ],
+        "recurrence": null
+      }
+    ],
+    "urgent-not-important": [
+      {
+        "id": "fx-b",
+        "text": "Reply to the venue",
+        "steps": [],
+        "description": "",
+        "labels": [],
+        "recurrence": null
+      }
+    ],
+    "not-urgent-important": [
+      {
+        "id": "fx-c",
+        "text": "Weekly review",
+        "steps": [],
+        "description": "",
+        "labels": [
+          "habits"
+        ],
+        "recurrence": {
+          "unit": "days",
+          "every": 7
+        }
+      }
+    ],
+    "not-urgent-not-important": [
+      {
+        "id": "fx-d",
+        "text": "Sort photos, 写真, صور",
+        "steps": [],
+        "description": "Unicode: café, naïve, 🚀",
+        "labels": [],
+        "recurrence": null
+      }
+    ]
+  },
+  "inbox": [
+    {
+      "id": "fx-e",
+      "text": "Look into a standing desk",
+      "steps": [],
+      "description": "",
+      "labels": [],
+      "recurrence": null
+    }
+  ],
+  "completed": [
+    {
+      "id": "fx-f",
+      "text": "Pay rent",
+      "steps": [],
+      "description": "",
+      "labels": [],
+      "recurrence": {
+        "unit": "months",
+        "every": 1
+      },
+      "seriesId": "fx-f",
+      "repeatIssued": true,
+      "origin": "urgent-important"
+    }
+  ],
+  "discarded": [
+    {
+      "id": "fx-g",
+      "text": "Old idea",
+      "steps": [],
+      "description": "",
+      "labels": [],
+      "recurrence": null,
+      "discardedFrom": "not-urgent-not-important"
+    }
+  ],
+  "preferences": {
+    "mood": "custom-fixture",
+    "appearance": "light",
+    "density": "compact",
+    "view": "columns",
+    "inboxOpen": true,
+    "customThemes": [
+      {
+        "id": "custom-fixture",
+        "name": "Fixture theme",
+        "colors": {
+          "light": {
+            "bg": "#f4f1ec",
+            "surface": "#ebe6de",
+            "fg": "#1d1b18",
+            "muted": "#5a554d",
+            "border": "#c9c1b5",
+            "accent": "#3b5b2e",
+            "note": "#fffdf9",
+            "q1": "#f2d0c9",
+            "q2": "#e6dcf2",
+            "q3": "#d3e3f2",
+            "q4": "#e3e6d3"
+          },
+          "dark": {
+            "bg": "#1a1917",
+            "surface": "#25231f",
+            "fg": "#ece8e1",
+            "muted": "#bdb6aa",
+            "border": "#58524a",
+            "accent": "#b9d9a8",
+            "note": "#3a3732",
+            "q1": "#4a302b",
+            "q2": "#3b3249",
+            "q3": "#2c3a49",
+            "q4": "#3a3d2c"
+          }
+        }
+      }
+    ],
+    "favorites": [
+      "calm"
+    ],
+    "recent": [
+      "custom-fixture",
+      "focused"
+    ]
+  }
+}
