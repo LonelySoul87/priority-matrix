@@ -15,9 +15,9 @@ Most task apps turn into one long list where everything feels equally pressing. 
 
 ## Getting started
 
-**Use it online.** Open the hosted copy at <https://lonelysoul87.github.io/priority-matrix/> once GitHub Pages is enabled for this repository.
+**Use it online.** Open <https://lonelysoul87.github.io/priority-matrix/>. It always has the latest version.
 
-**Or keep it local.** Download [`index.html`](index.html), save it anywhere (rename it if you like) and open it in your browser. It works with no internet connection.
+**Or keep it on your computer.** Download `Priority-Matrix-<version>.html` from the [latest release](https://github.com/LonelySoul87/priority-matrix/releases/latest), save it anywhere and open it in your browser. It works with no internet connection.
 
 Nothing to install, nothing to build.
 

@@ -1,0 +1,40 @@
+name: Release file
+
+# Attaches the app to a release as Priority-Matrix-<version>.html and, when
+# .github/release-notes/<tag>.md exists, uses it as the release description.
+# Runs when a release is published, or by hand for an existing release.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to update, for example v1.0.0
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  attach:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Attach the app, named with its version
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          set -euo pipefail
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "Not a version tag: $TAG"; exit 1; }
+          file="Priority-Matrix-${TAG#v}.html"
+          git show "${TAG}:index.html" > "$file"
+          grep -q ">${TAG}</span>" "$file" || { echo "The app in ${TAG} does not show ${TAG} next to its name"; exit 1; }
+          gh release upload "$TAG" "$file" --clobber
+          notes=".github/release-notes/${TAG}.md"
+          if [ -f "$notes" ]; then gh release edit "$TAG" --notes-file "$notes"; fi
