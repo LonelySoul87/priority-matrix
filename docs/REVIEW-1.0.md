@@ -81,7 +81,9 @@ We kept to the app's existing philosophy: one file, private, offline, no account
 
 ## Checks that need a person
 
-These need a person and a device, not a test runner. Youssef approved the visible changes (item 7) on 11 October 2026; items 1 to 6 are still open.
+These need a person and a device, not a test runner.
+
+Results on 11 October 2026: Youssef approved the visible changes (item 7). In Firefox, dragging tasks between boxes and printing both work (item 2; the Move menu wasn't tried). A board from an earlier copy restored with every task (the first half of item 5). Still unchecked: Safari (item 1, no Apple device to test on), an Android phone (item 3, planned), Open Design (item 4), reopening the internal build after 1.0.0 (the second half of item 5) and two tabs by hand (item 6).
 
 1. **Safari, on a Mac and an iPhone.** Date input, the 16px form text (no zoom), touch drags from the grip, the Undo bar position above the home indicator, and that `oklch()` colours render.
 2. **Firefox.** Drag and drop between quadrants, the Move menu, and printing.
