@@ -49,6 +49,7 @@ Nothing to install, nothing to build.
 - **40 built-in themes** in light and dark, plus your own. The theme editor checks text contrast against WCAG AA (4.5:1) before it lets you save.
 - **Column or list view**, comfortable or compact spacing, and a phone layout with a 2×2 overview at the top.
 - **Search, label filters, saved searches, templates and batch actions** for when the board grows.
+- **English or French.** The app opens in French when your browser is set to French. The FR/EN button switches at any time and remembers your choice.
 - **Clean printing:** the four quadrants in black on white, without buttons.
 
 <p align="center"><img src="docs/screenshots/mobile.png" alt="Priority Matrix on a phone, with the 2×2 overview at the top" width="300"></p>

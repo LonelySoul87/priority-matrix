@@ -2,6 +2,22 @@
 
 This project follows [Semantic Versioning](https://semver.org). 1.0.0 is the first public release. The earlier numbers (internal builds 1.0 to 1.11.2) were private development builds.
 
+## 1.1.0 (2026-10-11)
+
+### New
+
+- **French.** The whole app is now available in French: every button, message, label, help text and built-in theme name, with French dates ("Pour le mar. 13 oct.") and French spacing before ":" and "?". It opens in French when your browser's first language is French. The FR/EN button next to the view buttons switches language at any time and remembers the choice on this device. Switching reloads the page: your tasks, drafts and Undo history are already saved, so nothing is lost, and the button waits until you finish an open edit. Screen readers get the right language too: the page declares French, and the button names the other language in that language.
+
+### Fixed
+
+- The theme picker's Recent group kept only the theme you were on when you left the picker, so choosing several themes in a row added just the last one. Every theme you pick from the list now joins Recent, newest first. Themes you only pass through with the arrow keys still don't, so browsing doesn't push out the ones you chose.
+
+### Good to know
+
+- The calendar in a due date field follows your browser's own language, not the app's.
+- Undo descriptions keep the language they were written in, so a change made before switching still reads in the earlier language.
+- Backups don't carry the language, so restoring one never changes it.
+
 ## 1.0.0 (2026-10-11)
 
 First public release.

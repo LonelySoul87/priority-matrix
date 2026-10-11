@@ -4,6 +4,29 @@ import { openApp, closeBrowser } from './helpers.mjs';
 
 after(closeBrowser);
 
+const recentThemes = page => page.evaluate(() => [...document.querySelectorAll('#theme-mood optgroup[label="Recent"] option')].map(option => option.value));
+
+test('every theme picked from the list joins Recent, newest first', async () => {
+  const { page, close } = await openApp();
+  await page.focus('#theme-mood');
+  for (const id of ['graphite', 'stone', 'lagoon']) await page.selectOption('#theme-mood', id);
+  await page.keyboard.press('Tab');
+  assert.deepEqual(await recentThemes(page), ['lagoon', 'stone', 'graphite']);
+  await page.reload();
+  assert.deepEqual(await recentThemes(page), ['lagoon', 'stone', 'graphite'], 'kept after a reload');
+  await close();
+});
+
+test('arrowing through the picker adds only the theme you leave on to Recent', async () => {
+  const { page, close } = await openApp();
+  await page.focus('#theme-mood');
+  for (let i = 0; i < 4; i++) await page.keyboard.press('ArrowDown');
+  const landed = await page.inputValue('#theme-mood');
+  await page.keyboard.press('Tab');
+  assert.deepEqual(await recentThemes(page), [landed]);
+  await close();
+});
+
 // The same 880 colour pairs the original audits checked: every built-in theme, light and dark.
 test('every built-in theme keeps text and controls at WCAG AA contrast', async () => {
   const { page, close } = await openApp();
